@@ -1,0 +1,13 @@
+.section {
+  padding: var(--padding-section);
+
+  .user {
+    position: absolute;
+    bottom: 18px;
+    right: 18px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

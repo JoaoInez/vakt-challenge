@@ -1,0 +1,69 @@
+@mixin btn {
+  display: block;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  flex: 1;
+  flex-basis: 50%;
+  max-width: 250px;
+  border-radius: var(--border-radius);
+  transition: var(--transition-btn);
+  margin: 2vw 1rem;
+}
+
+.article {
+  height: 100vh;
+  padding: 0 var(--padding-screen);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h1 {
+    font-size: 6rem;
+    margin-bottom: 0;
+  }
+
+  .subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 5rem;
+    color: var(--color-secondary);
+  }
+
+  div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .primaryBtn {
+      @include btn;
+      border: 1px solid var(--color-primary);
+      background-color: var(--color-primary);
+      color: var(--color-white);
+
+      &:hover {
+        border: 1px solid var(--color-black);
+        background-color: var(--color-white);
+        color: var(--color-black);
+      }
+    }
+
+    .outlineBtn {
+      @include btn;
+      border: 1px solid var(--color-secondary);
+      color: var(--color-secondary);
+
+      &:hover {
+        border: 1px solid var(--color-black);
+        color: var(--color-black);
+      }
+    }
+  }
+
+  @media only screen and (max-width: 478px) {
+    h1 {
+      font-size: 5rem;
+    }
+  }
+}

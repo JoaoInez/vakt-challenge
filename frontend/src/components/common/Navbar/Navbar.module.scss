@@ -1,0 +1,40 @@
+.navbar {
+  padding: 1.5rem var(--padding-screen);
+  background-color: rgba(#fff, 0.4);
+  backdrop-filter: blur(2px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  border-bottom: 1px solid var(--color-terciary);
+  z-index: 1;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      margin: 0;
+      color: var(--color-black);
+    }
+
+    .nav {
+      a {
+        margin-left: 1.5rem;
+
+        &.link {
+          color: var(--color-secondary);
+          transition: var(--transition-btn);
+
+          &:hover {
+            color: var(--color-black);
+          }
+        }
+
+        &.user:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

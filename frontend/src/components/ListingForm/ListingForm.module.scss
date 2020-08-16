@@ -1,0 +1,42 @@
+.form {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+
+  textarea {
+    grid-column: 1 / span 4;
+  }
+
+  .error {
+    border-color: var(--color-error);
+  }
+
+  .btnContainer {
+    grid-column: 1 / span 4;
+
+    input[type="submit"] {
+      margin-right: 0.5rem;
+    }
+  }
+
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    .name {
+      grid-column: 1 / span 2;
+    }
+  }
+
+  @media only screen and (max-width: 478px) {
+    .name {
+      grid-column: 1 / span 4;
+    }
+
+    .price {
+      grid-column: 1 / span 2;
+    }
+
+    .currency {
+      grid-column: 3 / span 2;
+    }
+  }
+}

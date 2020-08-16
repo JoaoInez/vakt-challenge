@@ -1,0 +1,57 @@
+.section {
+  padding: var(--padding-section);
+
+  article {
+    max-width: 720px;
+  }
+
+  .topContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .deleteBtn {
+      background-color: var(--color-error);
+      border-color: var(--color-error);
+      margin-right: 0.5rem;
+    }
+
+    .editBtn {
+      background-color: var(--color-black);
+      border-color: var(--color-black);
+    }
+
+    .deleteBtn:hover,
+    .editBtn:hover {
+      background-color: transparent;
+      border-color: var(--color-black);
+    }
+  }
+
+  .bottomContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      margin: 0;
+    }
+
+    .userContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .cancelBtn {
+    background-color: var(--color-black);
+    border-color: var(--color-black);
+  }
+}

@@ -1,0 +1,31 @@
+.section {
+  padding: var(--padding-section);
+
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .addBtn {
+      background-color: var(--color-success);
+      border-color: var(--color-success);
+      margin-right: 0.5rem;
+
+      &:hover {
+        background-color: transparent;
+        border-color: var(--color-black);
+      }
+    }
+
+    .logoutBtn {
+      background-color: var(--color-error);
+      border-color: var(--color-error);
+
+      &:hover {
+        background-color: transparent;
+        border-color: var(--color-black);
+      }
+    }
+  }
+}
