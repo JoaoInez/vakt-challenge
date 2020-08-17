@@ -67,5 +67,16 @@
 4. Start app
 
 ```
-> yarn start
+> yarn dev
 ```
+
+### Using the website
+
+If database was setup, login using:
+
+- username
+  `john`
+- password
+  `12345`
+
+Otherwise sign up through the website.

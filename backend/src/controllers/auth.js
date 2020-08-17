@@ -8,8 +8,6 @@ exports.login = async (req, res, next) => {
   try {
     const { username, password } = req.body;
 
-    console.log(username, password);
-
     if (!username || !password) return next(400);
 
     const user = await models.user.findOne({ where: { username } });

@@ -1,14 +1,20 @@
 const sequelize = require("./index");
+const bcrypt = require("bcrypt");
 
 const setup = async () => {
   await sequelize.sync({ force: true });
 
+  const johnPassword = await bcrypt.hash("12345", 10);
+  const annePassword = await bcrypt.hash("anne1", 10);
+  const mariaPassword = await bcrypt.hash("m1998", 10);
+  const emmanuelPassword = await bcrypt.hash("emm223", 10);
+
   await sequelize.models.user
     .bulkCreate([
-      { username: "John", password: "12345" },
-      { username: "Anne", password: "anne1" },
-      { username: "Maria", password: "m1998" },
-      { username: "Emmanuel", password: "emm223" },
+      { username: "john", password: johnPassword },
+      { username: "anne", password: annePassword },
+      { username: "maria", password: mariaPassword },
+      { username: "emmanuel", password: emmanuelPassword },
     ])
     .then(([john, anne, maria, emmanuel]) => {
       john.createListing({
